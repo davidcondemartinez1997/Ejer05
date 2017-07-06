@@ -8,15 +8,29 @@ namespace Ejer05
 {
     public class Data
     {
-        public string text = "Hola mundo";
-        public int number1 = 1;
-        public int number2 = 2;
+        public string text;
+        public int number1;
+        public int number2;
+
+        public Data(string text, int number1, int number2)
+        {
+            this.text = text;
+            this.number1 = number1;
+            this.number2 = number2;
+
+        }
 
     }
 
-    public class Metodo : Data
+    public class Metodo
     {
-        Data datos = new Data();
+        private Data datos;
+        public Metodo(string text, int number1, int number2)
+        {
+            this.datos = new Data(text, number1, number2);
+        }
+        
+
         public string Concatenar()
         {
             return datos.text + "-" + datos.number1 + "-" + datos.number2;

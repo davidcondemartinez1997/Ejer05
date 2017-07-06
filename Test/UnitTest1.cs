@@ -10,7 +10,7 @@ namespace Test
         [TestMethod]
         public void TestMethod1()
         {
-            Metodo metodo1 = new Metodo();
+            Metodo metodo1 = new Metodo("Hola mundo", 1, 2);
             var res = metodo1.Concatenar();
         }
     }
